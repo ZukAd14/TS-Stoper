@@ -9,7 +9,7 @@ interface StopwatchDom {
 abstract class Stopwatch {
 
   protected currentTime: number = 0
-  private timer: number | null = null
+  private timer: ReturnType<typeof setInterval> | null = null
   protected dom = <StopwatchDom> {}
 
   constructor(element: HTMLDivElement) {
